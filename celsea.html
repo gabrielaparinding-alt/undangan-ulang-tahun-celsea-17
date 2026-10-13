@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Seventeen Chelsea 🎂</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  background: linear-gradient(135deg, #ffc4e1, #a8e6ff);
+  color: #62416f;
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.card {
+  width: 90%;
+  max-width: 500px;
+  margin: 45px auto;
+  padding: 35px 22px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.86);
+  box-shadow: 0 12px 35px #b85eaa40;
+  border: 3px solid white;
+  position: relative;
+}
+
+.ribbon {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff80b5, #83dfff);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: clamp(32px, 8vw, 48px);
+  margin: 20px 0 8px;
+  color: #fa65a7;
+  text-shadow: 2px 2px #bcecff;
+}
+
+h2 {
+  color: #63bde8;
+  margin: 15px 0;
+}
+
+.age {
+  font-size: 80px;
+  font-weight: bold;
+  color: #ff78b7;
+  text-shadow: 4px 4px #a8e6ff;
+}
+
+.subtitle {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 15px 0;
+}
+
+.decor {
+  font-size: 35px;
+  margin: 15px 0;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.details {
+  background: linear-gradient(135deg, #ffe1f0, #d9f5ff);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 22px 0;
+  line-height: 2;
+}
+
+button {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #ff77b7, #69cfff);
+  box-shadow: 0 5px 15px #8dcde966;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.06);
+}
+
+#surprise {
+  display: none;
+  margin-top: 22px;
+  padding: 18px;
+  background: #fff0f8;
+  border-radius: 18px;
+  line-height: 1.8;
+}
+
+.footer {
+  font-size: 13px;
+  margin-top: 25px;
+  color: #8b75a0;
+}
+
+.balloon {
+  position: fixed;
+  bottom: -100px;
+  font-size: 35px;
+  animation: rise 9s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rise {
+  from { transform: translateY(0) rotate(0); }
+  to { transform: translateY(-120vh) rotate(25deg); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="balloon" style="left:5%;animation-delay:0s">🎈</div>
+<div class="balloon" style="left:85%;animation-delay:3s">🩷</div>
+<div class="balloon" style="left:25%;animation-delay:5s">🩵</div>
+<div class="balloon" style="left:70%;animation-delay:1s">🎈</div>
+
+<div class="card">
+
+  <div class="decor">🎀 🩷 🦋 🩵 🎀</div>
+
+  <div class="ribbon">YOU'RE INVITED!</div>
+
+  <h1>Sweet Seventeen</h1>
+
+  <p class="subtitle">
+    Dengan penuh kebahagiaan,<br>
+    aku mengundang kamu untuk merayakan
+  </p>
+
+  <div class="age">17</div>
+
+  <h2>✨ Chelsea's Birthday ✨</h2>
+
+  <p class="subtitle">
+    A new chapter, a new adventure!<br>
+    Let's make beautiful memories together 💕
+  </p>
+
+  <div class="decor">🎂 🎉 🧸 💐</div>
+
+  <div class="details">
+    <p>📅 <b>Hari/Tanggal</b></p>
+    <p>Silakan isi tanggal acara</p>
+
+    <p>⏰ <b>Waktu</b></p>
+    <p>Silakan isi jam acara</p>
+
+    <p>📍 <b>Tempat</b></p>
+    <p>Silakan isi lokasi acara</p>
+
+    <p>👗 <b>Dress Code</b></p>
+    <p>Pink & Blue 🩷🩵</p>
+  </div>
+
+  <p class="subtitle">
+    Your presence is the best gift! 🎁
+  </p>
+
+  <button onclick="openSurprise()">
+    💌 Buka Pesan Spesial
+  </button>
+
+  <div id="surprise">
+    <h2>Dear Friends! 💗</h2>
+    <p>
+      Aku nggak sabar merayakan hari spesial ini
+      bersama kalian! Yuk, datang dan ramaikan
+      ulang tahunku yang ke-17! 🎂🦋
+    </p>
+    <p><b>See you there! 🩷🩵</b></p>
+    <div class="decor">🎉 🎈 🎁 🎊</div>
+  </div>
+
+  <div class="footer">
+    Made with love ♡ Chelsea's 17th Birthday
+  </div>
+
+</div>
+
+<script>
+function openSurprise() {
+  const surprise = document.getElementById("surprise");
+
+  if (surprise.style.display === "block") {
+    surprise.style.display = "none";
+  } else {
+    surprise.style.display = "block";
+    confetti();
+  }
+}
+
+function confetti() {
+  const emojis = ["💗", "🩵", "✨", "🎉", "🎀"];
+
+  for (let i = 0; i < 35; i++) {
+    const item = document.createElement("span");
+    item.textContent =
+      emojis[Math.floor(Math.random() * emojis.length)];
+
+    item.style.position = "fixed";
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.top = "-30px";
+    item.style.fontSize = "22px";
+    item.style.zIndex = "999";
+    item.style.pointerEvents = "none";
+    document.body.appendChild(item);
+
+    const duration = 2000 + Math.random() * 2000;
+
+    item.animate([
+      { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+      {
+        transform: `translateY(${innerHeight + 60}px)
+                    rotate(${Math.random() * 720}deg)`,
+        opacity: 0.2
+      }
+    ], {
+      duration: duration,
+      easing: "ease-in"
+    });
+
+    setTimeout(() => item.remove(), duration);
+  }
+}
+</script>
+
+</body>
+</html>
